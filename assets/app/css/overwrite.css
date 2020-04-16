@@ -1,0 +1,25 @@
+.font-block{
+    width:100%;
+    font-size: 18px;
+}
+
+.rounded{
+    border-radius: 0!important;
+}
+
+.btn{
+    border-radius: 0!important;
+}
+
+/* .btn-primary{
+    background: red;
+} */
+
+.form-check-label{
+    width: 100%;
+    text-align: left;
+}
+
+#map-email-input{
+    display: none;
+}

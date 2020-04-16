@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Language" content="en">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Персонализирани звездни карти - Създай своята</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+  <meta name="description" content="Уникален начин да запазиш своя неповторим момент чрез звездите - пресъздай небето така, както е било над теб, на точния ден, час и място.">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152071125-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-152071125-1');
+  </script>
+  <!-- Facebook Pixel Code -->
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1297040577132309');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1297040577132309&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+<link href="./main.bac0fd1dd3de7ca7a05b.css" rel="stylesheet"></head>
+
+<body>
+  
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="rD0rzwthUL4DtYvXn0ZM429k7Wjqvkgct8uwDoDu">
+  
+  <!-- Scripts -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="app/js/app.js" defer></script>
+  
+  <script type="text/javascript" src="app/public/js/d3-celestial-master/lib/d3.min.js"></script>
+  <script type="text/javascript" src="app/public/js/d3-celestial-master/lib/d3.geo.projection.min.js"></script>
+  <script type="text/javascript" src="app/public/js/d3-celestial-master/celestial.js"></script>
+  
+  <link rel="stylesheet" href="app/public/css/vuetify.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900%7CMaterial+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="app/css/nano_pickr.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+  <script>
+      WebFont.load({
+          google: {
+              families: ['Oswald', 'Pacifico', 'Lobster', 'Marck Script']
+          }
+      }); 
+  </script>
+  
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  
+  <!-- Styles -->
+  
+  <link href="app/css/overwrite.css" rel="stylesheet">
+  
+  
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="/"><img height="40" src='../assets/images/logo.svg' /></a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+              data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+              aria-label="Toggle navigation">
+              Меню
+              <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="/#learn_more">Научи повече</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="/create.html">Създай своята</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#contacts">Контакти</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="tel:0887980371"><i class="fa fa-phone fa-flip-horizontal"></i> 0887 980 371</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav><div class="container" id="app" data-app="true">
+      <main>
+          <section>
+              <star-map>
+                  <template slot="csrf">
+                      <input type="hidden" name="_token" value="rD0rzwthUL4DtYvXn0ZM429k7Wjqvkgct8uwDoDu"> </template>
+              </star-map>
+          </section>
+          <div id="address-form">
+              <h2 class="address-title">Данни за доставка</h2>
+              <div class="row">
+                  <div class="col-md-6">
+                      <img id="preview-image" class="img-fluid" src="assets/images/sample.jpg" alt="Review Image">
+                  </div>
+                  <div class="col-md-6">
+                      <form>
+                          <div class="form-group">
+                              <label>Размер:</label>
+                              <div class="form-check group-options">
+                                  <input class="form-check-input" checked type="radio" id="">
+                                  <label class="form-check-label" for="">
+                                      50 cm x 70 cm
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="form-group col-md-6">
+                                  <label for="firstName">Име:</label>
+                                  <input id="firstName" type="text" name="firstName" class="form-control" placeholder=""
+                                      required>
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="familyName">Фамилия:</label>
+                                  <input id="familyName" type="text" name="familyName" class="form-control" placeholder=""
+                                      required>
+                              </div>
+                          </div>
+                          <div class="form-row">
+                              <div class="form-group col-md-6">
+                                  <label for="userEmail">Е-майл:</label>
+                                  <input id="userEmail" type="email" class="form-control" placeholder="твоя@е-майл.com"
+                                      required>
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="phone">Телефон:</label>
+                                  <input id="phone" type="text" class="form-control" placeholder="088xxxxxxx" required>
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="address">Адрес:</label>
+                                  <input id="address" type="text" class="form-control" required>
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="city">Град:</label>
+                                  <input id="city" type="text" class="form-control" required>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>Начин на получаване:</label>
+                              <div class="form-check group-options">
+                                  <fieldset id="choose-delivery">
+                                      <input id="address_input" class="form-check-input" value="onaddress" type="radio"
+                                          name="delivery" checked>
+                                      <label class="form-check-label" for="address_input">
+                                          На адрес
+                                      </label>
+                                      <input id="in_our_store_input" class="form-check-input" value="instore" type="radio"
+                                          name="delivery">
+                                      <label class="form-check-label" for="in_our_store_input">
+                                          В наш магазин
+                                      </label>
+                                      <fieldset id="choose-store">
+                                          <input id="sofia" class="form-check-input" value="Sofia" type="radio"
+                                              name="store" checked>
+                                          <label class="form-check-label" for="sofia">
+                                              София -
+                                              AlfaCommerce,
+                                              ул. Шипка 6,
+                                          </label>
+                                          <input id="plovdiv" class="form-check-input" value="Velingrad" type="radio"
+                                              name="store">
+                                          <label class="form-check-label" for="plovdiv">
+                                              Пловдив -
+                                              AlfaCommerce,
+                                              Бул. "6-ти Септември" 177,
+                                          </label>
+                                          <input id="velingrad" class="form-check-input" value="Plovdiv" type="radio"
+                                              name="store">
+                                          <label class="form-check-label" for="velingrad">
+                                              Велинград -
+                                              AlfaCommerce,
+                                              ул."Хан Аспарух" 23,
+                                          </label>
+                                      </fieldset>
+                                  </fieldset>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>Начин на плащене:</label>
+                              <div class="form-check group-options">
+                                  <input class="form-check-input" checked type="radio" id="pay-on-delivery">
+                                  <label class="form-check-label" for="pay-on-delivery">
+                                      Наложен платеж
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>Комплект:</label>
+                              <div class="form-check group-options">
+                                  <input class="form-check-input" id="print" name="accessories" value="69" type="radio">
+                                  <label class="form-check-label" for="print">
+                                       Принт - 69 лв.
+                                  </label>
+                                  <input class="form-check-input" id="print-back" name="accessories" checked value="89" type="radio">
+                                  <label class="form-check-label" for="print-back">
+                                      Принт с гръб и окачване - 89лв.
+                                  </label>
+                                  <input class="form-check-input" id="print-frame" name="accessories" value="119" type="radio">
+                                  <label class="form-check-label" for="print-frame">
+                                       Принт с рамка, гръб, окачване и стъкло - 119лв.
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="final-price">
+                              Цена: <span id="final_price">89</span> лв.
+                          </div>
+                          <button type="submit" class="btn btn-primary btn-order">Поръчай</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <img id="final-image" width="250" class="img-fluid" src="assets/images/sample.jpg" alt="" />
+      </main>
+  </div>
+  <div class="loader-overlay">
+      <div class="loader">
+          <img src="../assets/images/loader.svg"/>
+      </div>
+  </div><!-- Contact Section -->
+  <section id="contacts" class="contact-section bg-black">
+    <div class="container">
+  
+      <div class="row">
+  
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Магазини:</h4>
+              <hr class="my-4">
+              <div class="small text-black"><a href="">ул. Шипка 6, София</a></div>
+              <div class="small text-black"><a href="">Бул. "6-ти Септември" 177, Пловдив</a></div>
+              <div class="small text-black"><a href="">ул."Хан Аспарух" 23, Велинград</a></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Е-майл</h4>
+              <hr class="my-4">
+              <div class="small text-black">
+                <a href="mailto:zvezdni-karti@gmail.com">zvezdni-karti@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Телефон</h4>
+              <hr class="my-4">
+              <div class="small text-black"><a href="tel:+359887980371">+359 887 980 371</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+  
+    </div>
+  </section>
+<script type="text/javascript" src="./assets/scripts/main.bac0fd1dd3de7ca7a05b.js"></script></body>
+
+</html>
