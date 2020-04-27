@@ -34810,8 +34810,8 @@ var addToLangArray = () => {
                     config: {
                         width: 1500,
                         form: !1,
-                        location: !0,
-                        geopos: [36.0629, -115.2921],
+                        location: !0,                         
+                        geopos: [51.5054, -0.0754],
                         adaptable: !1,
                         interactive: !1,
                         controls: !1,
@@ -34823,17 +34823,17 @@ var addToLangArray = () => {
                             show: !0
                         },
                         dsos: {
-                            show: !1
+                            show: false
                         },
                         background: {
                             fill: "#000000",
                             opacity: 1,
-                            stroke: "#ffffff",
-                            width: 10
+                            stroke: "#191d2a",
+                            width: 1
                         },
                         constellations: {
                             show: !0,
-                            names: !1,
+                            names: false,
                             lines: !0,
                             linestyle: {
                                 stroke: "#cccccc",
@@ -34873,7 +34873,7 @@ var addToLangArray = () => {
                             }
                         },
                         mw: {
-                            show: !1
+                            show: false
                         }
                     }
                 }
@@ -34895,6 +34895,8 @@ var addToLangArray = () => {
                 },
                 initialize_map: function() {
                     console.log("initialize map");
+                    console.log(this);
+                    console.log(this.config);
                     document.querySelector(".loader-overlay").style.display = "none";
                     Celestial.display(this.config), document.getElementById("celestial-map").removeAttribute("style"), document.getElementById("celestial-date").hidden = !0;
                     var t, e = new Date;
@@ -36073,7 +36075,7 @@ var addToLangArray = () => {
                             show: !1
                         },
                         background: {
-                            fill: "#000000",
+                            fill: "#7",
                             opacity: 1,
                             stroke: "#ffffff",
                             width: 10

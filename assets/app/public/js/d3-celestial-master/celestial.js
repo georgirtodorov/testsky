@@ -1,7 +1,7 @@
 // Copyright 2015 Olaf Frohn https://github.com/ofrohn, see LICENSE
 !(function () {
     var Celestial = {
-        version: '0.6.8',
+        version: '0.7.3',
         container: null,
         data: []
     };
@@ -56,6 +56,7 @@
             rotation = getAngles(cfg.center),
             path = cfg.datapath || "";
         path = path.replace(/([^\/]$)/, "$1\/");
+		console.log(path);
 
 
         if (par != "body") $(cfg.container).style.height = px(height);
